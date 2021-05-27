@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        /*  var userList = ['张三'，'李四'，'王二'] */
+        /*  var userList = [{name:'张三'，pwd:'123456'},{name:'李四'，pwd:'234556'}] */
+
+        var n = prompt('请输入用户名：')
+        var user = {
+            name:n
+        }
+         
+         function login(func){       
+            
+            /* var user = {
+                name: '张三'
+            } */
+            var myInfo = user
+
+            func(myInfo)
+         }
+
+         function check(u){           
+             // 如果u.name 在userList 里面 就显示 欢迎光临 +u.name  否则 提示找不到姓名
+            if(u.name == '张三'){
+                alert('欢迎' + user.name)
+            }else{
+                alert('找不到姓名')
+            }
+
+         }
+
+         login(check)
+
+
+    </script>
+    
+</body>
+</html>

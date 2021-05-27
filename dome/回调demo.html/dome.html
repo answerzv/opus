@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回调demo</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        /* 回调函数： 一个函数 sa 被当做参数， 传给另一个函数func , 被当做参数的函数 sa 叫做回调函数 */
+
+        function fa(func){
+            console.log(func)
+            func()
+        }
+
+        function sa(){
+            console.log('我是sa打印的')
+        }
+        
+        fa(sa)
+
+    </script>
+</body>
+</html>

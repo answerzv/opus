@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dome.css">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+      {{message}}
+     <panda></panda>
+     <panda2></panda2>
+    </div>
+    <a href="https://www.jianshu.com/p/dadbb8f8a952">它们之间的主要区别可以用这样一句话来概括：src用于替代这个元素，而href用于建立这个标签与外部资源之间的关系。</a>
+    <p class="face">一个人如果不想输，就要不断学好眼前的东西，它们将来都会大有用处…</p>
+    <a href="https://www.google.com/webhp?hl=zh-CN&sa=X&ved=0ahUKEwj1kaPZ3MjwAhWJPZQKHQSyD_AQPAgI"><img src="cut.jpg"></a>
+    <div id="one">
+        {{text}}
+        <mycom></mycom>
+    </div>
+    <div id="use">{{title}}</div>
+   
+    
+
+
+
+
+    <script>
+          Vue.component('mycom',{   // 全局组件
+            template:'<h6>zkjfsjf好{{mag}}{{msg1}}</h6>',
+            data:function(){
+               return{
+                mag:'zhefsf',
+                msg1:'12344'
+               }
+            }
+        })
+
+
+        var app = new Vue({
+            el:'#main',
+            data:{
+                message:'人生如梦',
+                
+            },
+            components:{"panda":{    //局部组件
+                data:function(){
+                  return{
+                    le:'dfd'
+                  }
+                },
+                template:'<div>事在人为{{le}}</div>'
+            }},
+
+            components:{"panda2":{    //局部组件
+                data:function(){
+                  return{
+                    le:'开始'
+                  }
+                },
+                template:'<div>事在人为{{le}}</div>'
+            }}
+        })
+
+        const app2 = new Vue({
+            el:'#one',
+            data:{
+                text:'文本内容'
+            }
+        })
+
+        const app3 = new Vue({
+            el:'#use',
+            template:'<h1>志在四方，{{be}}{{title}}</h1>',
+            data:{
+                title:'短短几个秋',
+                be:'哈哈哈哈哈哈哈哈哈哈哈哈哈'
+                
+            }
+        })
+        
+      
+
+    </script>
+</body>
+</html>

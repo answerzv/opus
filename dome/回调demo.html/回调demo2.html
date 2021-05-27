@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+    /* switch 解决方式一 */
+
+
+      var name= prompt('请输入姓名')
+    //   var pwd = prompt('请输入密码')
+
+      var userList = {
+          name:name
+      }
+
+       function login(func){ 
+          
+           func(userList)
+       }
+
+       login(we)
+
+    
+        function we(c){
+            // var k  = ['张三','李四','王二']
+            // for(i = 0; i < k.length; i++){
+            //     var nameW = k[i]
+
+                switch(c.name){
+                    case '张三':
+                    alert('欢迎'+c.name)
+                    break;
+                    case '李四':
+                    alert('欢迎'+c.name)
+                    break;
+                    case '王二':
+                    alert('欢迎'+c.name)
+                    break;
+                    default:
+                    alert('找不到姓名')
+
+                }
+
+                
+
+                // function a(a){
+
+                
+                //   if(c.name == a){
+                //       alert('欢迎'+c.name)
+                     
+                //   }
+                //   else if(c.name!=a ){    //被判断挡在外面
+                //       alert('找不到姓名')
+                      
+                //   }
+
+                // }
+                    
+            
+
+               
+
+                // a(nameW)
+                
+               
+
+
+                
+            // }
+              
+
+            
+            console.log('回调')
+        }
+
+</script>
+
+</body>
+</html>
